@@ -1,0 +1,33 @@
+.team{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-top: 250rpx;
+}
+.msg{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.msg text{
+  color: #222;
+  line-height: 36rpx;
+}
+.team_sad{
+  margin: 110rpx auto;
+}
+.team_sad image{
+  width: 235rpx;
+  height: 235rpx;
+}
+.res button{
+  height: 103rpx;
+  line-height: 103rpx;
+  margin: 0 80rpx;
+  font-size: 36rpx;
+  color: #fff;
+  background-color: #333;
+  border-radius: 103rpx;
+  box-shadow: 0 0 27rpx #c2c2c2;
+}

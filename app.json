@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/category/category",
+    "pages/cart/cart",
+    "pages/detail/detail",
+    "pages/user/user",
+    "pages/user/description/description",
+    "pages/user/team/team",
+    "pages/user/contact/contact",
+    "pages/user/setting/setting",
+    "pages/user/partner/partner",
+    "pages/user/partner/code/code",
+    "pages/search/search",
+    "pages/search/searchList/search-list"
+  ],
+  "tabBar": {
+    "selectedColor": "#4e4e4e",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/images/home.png",
+        "selectedIconPath": "assets/images/home_on.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "iconPath": "assets/images/mallrebate.png",
+        "selectedIconPath": "assets/images/mallrebate_on.png",
+        "text": "商城返利"
+      },
+      
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "assets/images/user.png",
+        "selectedIconPath": "assets/images/user_on.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ff4964",
+    "navigationBarTitleText": "全民爱折扣",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#eeeeee"
+  }
+}

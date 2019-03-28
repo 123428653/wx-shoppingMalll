@@ -1,0 +1,56 @@
+<!--pages/category/category.wxml-->
+<view class="mallRebate">
+  <view class='header'>
+    <view class='top-search'>
+      <view class='section'>
+        <icon class='search-cion' type='search' size='16' color='#b2b2b2' />
+        <input
+          value='{{inputValue}}'
+          bindconfirm='searchList'
+          bindinput='changeVal'
+          confirm-type='search'
+          placeholder='搜索商品'
+          placeholder-class="text-placeholder"></input>
+        <label
+          wx:if='{{inputValue}}'
+          class='icon icon-search_close'
+          bindtap='clearVal'></label>
+        <view class='search-btn' bindtap='searchList'>搜索</view>
+      </view>
+    </view>
+  </view>
+  <view class='other-mall'>
+    <view>
+      <image src='/assets/images/mallrebate_jd.png'></image>
+      <text>京东</text>
+    </view>
+    <view>
+      <image src='/assets/images/mallrebate_pdd.png'></image>
+      <text>拼多多</text>
+    </view>
+    <view>
+      <image src='/assets/images/mallrebate_tb.png'></image>
+      <text>淘宝</text>
+    </view>
+  </view>
+  <view class='tab'>
+    <view
+      wx:for="{{tab}}"
+      wx:key=""
+      class="{{index === curTab ? 'active' : ''}}"
+      data-index="{{index}}"
+      bindtap="tabChang">
+      <text>{{item}}</text>
+    </view>
+    <!-- <view class='active'>
+      <text>高返</text>
+    </view>
+    <view>
+      <text>爆款</text>
+    </view> -->
+  </view>
+  <view class='main'>
+    <list wx:if='{{!isLoading}}' list='{{list}}'></list>
+  </view>
+</view>
+

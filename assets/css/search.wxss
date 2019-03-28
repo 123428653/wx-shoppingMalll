@@ -1,0 +1,40 @@
+/* 搜索框样式 */
+@import '/assets/css/sprites.wxss';
+.header{
+  background: #ff4964;
+}
+.top-search{
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+}
+.section{
+  width: 530rpx;
+  margin: 0 110rpx;
+  background: #fff;
+  border-radius: 80rpx;
+  position: relative;
+}
+.search-cion{
+  position: absolute;
+  left: 19rpx;
+  top: 15rpx;
+}
+.section input{
+  height: 60rpx;
+  width: 460rpx;
+  padding-left: 62rpx;
+  font-size: 28rpx;
+  box-sizing: border-box;
+}
+.section .text-placeholder{
+  color: #b2b2b2;
+}
+.search-btn{
+  position: absolute;
+  right: -107rpx;
+  top: 10rpx;
+  font-size: 32rpx;
+  color: #fff;
+  padding: 0 20rpx;
+}

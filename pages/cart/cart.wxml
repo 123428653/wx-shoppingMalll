@@ -1,0 +1,19 @@
+<!--pages/category/category.wxml-->
+<view class="cart">
+  <view class='cart-list'>
+    <view class='item'>
+      <view class='item-fl'>
+        <label>
+          <checkbox value="小米8" checked="false" />
+        </label>
+        <view class='img'><image src="https://i1.mifile.cn/a1/pms_1537323994.03296551!180x1800.jpg"></image></view>
+        <text class='name'>小米8 青春 6GB+64GB 深空灰</text>
+      </view>
+      <view >
+        <text class='quantity'>1 x</text>
+        <text class='price'> 1699元</text>
+      </view>
+    </view>
+  </view>
+</view>
+

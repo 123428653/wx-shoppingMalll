@@ -1,0 +1,62 @@
+<!--index.wxml-->
+<view class='container'>
+  <view class='header'>
+    <view class='top-search'>
+      <navigator url='../search/search' class='search-input'>
+        <icon type='search' size='18' color='#fff' />
+        <text>搜索商品</text>
+      </navigator>
+    </view>
+    <scroll-view scroll-x>
+      <view class='nav'>
+        <view
+          wx:for="{{navList}}"
+          class="{{index === curNav ? 'active' : ''}}"
+          wx:key=""
+          data-index="{{index}}"
+          data-name="{{item}}"
+          bindtap="tabChang">
+           <text>{{item}}</text>
+        </view>
+        <!-- <view class='active'><text>推荐</text></view>
+        <view><text>百货</text></view>
+        <view><text>母婴</text></view>
+        <view><text>鞋包</text></view>
+        <view><text>服饰</text></view>
+        <view><text>水果</text></view>
+        <view><text>百货</text></view>
+        <view><text>母婴</text></view>
+        <view><text>鞋包</text></view>
+        <view><text>服饰</text></view>
+        <view><text>水果</text></view> -->
+      </view>
+    </scroll-view>
+  </view>
+  <swiper
+    indicator-dots='{{swiper.indicatorDots}}'
+    indicator-color='{{swiper.indicatorColor}}'
+    indicator-active-color='{{swiper.indicatorActiveColor}}'
+    autoplay='{{swiper.autoplay}}'
+    interval='{{swiper.interval}}'
+    duration='{{swiper.duration}}'>
+    <block wx:for='{{swiper.imgUrls}}' wx:key='{{index}}'>
+      <swiper-item>
+        <image lazy-load="true" src='{{item}}' class='slide-image' width='355' height='150' />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='filter'>
+    <view
+      wx:for="{{filterList}}"
+      wx:key=""
+      data-index="{{index}}"
+      class="{{index === 3? 'sort' : ''}}{{index === curFilter? ' active' : ''}}"
+      bindtap="filterTab">
+      <text>{{item}}</text>
+      <label wx:if="{{index === 3}}"></label>
+    </view>
+  </view>
+  <view class='content'>
+    <index-list data="{{listData}}"></index-list>
+  </view>
+</view>

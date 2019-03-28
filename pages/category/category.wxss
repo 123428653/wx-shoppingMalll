@@ -1,0 +1,70 @@
+/* pages/category/category.wxss */
+@import '/assets/css/search.wxss';
+page{
+  background-color: #f5f5f5;
+}
+.other-mall{
+  display: flex;
+  justify-content: space-around;
+  margin: 28rpx 0 27rpx 0;
+}
+.other-mall view{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.other-mall image{
+  width: 140rpx;
+  height: 140rpx;
+  margin-bottom: 20rpx;
+}
+.other-mall text{
+  font-size: 34rpx;
+  color: #212112;
+}
+.tab{
+  height: 74rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+.tab view{
+  flex: 1;
+  height: 100%;
+  line-height: 74rpx;
+  text-align: center;
+  position: relative;
+}
+.tab view:first-child::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 11rpx;
+  bottom: 11rpx;
+  width: 2rpx;
+  background-color: #ddd;
+}
+.tab view text{
+  display: inline-block;
+  width: 122rpx;
+  height: 100%;
+  position: relative;
+  font-size: 28rpx;
+  color: #4e4e4e;
+}
+.tab .active text{
+  color: #ff4964;
+}
+.tab .active text::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -12rpx;
+  height: 12rpx;
+  background-color: #ff4964;
+}
+.main{
+  padding: 12rpx 30rpx;
+}

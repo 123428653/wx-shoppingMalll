@@ -1,0 +1,13 @@
+<!--logs.wxml-->
+<view class="desc">
+  <!-- <image src='http://dummyimage.com/750x680'></image> -->
+  <poster
+    id="poster"
+    hide-loading="{{true}}"
+    preload="{{true}}"
+    config="{{jdConfig}}"
+    bind:success="onPosterSuccess"
+    bind:fail="onPosterFail">
+    <button>生成海报</button>
+  </poster>
+</view>

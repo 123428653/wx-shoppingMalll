@@ -1,0 +1,124 @@
+<template name='phoneItems'>
+  <view class="item">
+    <navigator url='../detail/detail'>
+      <image class="item-img" src="{{url}}" mode="widthFix"></image>
+      <view class="item-title-box">
+        <navigator url="url" class="item-title">{{title}}</navigator> 
+        <!-- <image class="arrow" src="../../image/arrow.png"></image>   -->
+      </view>
+      <view class="name">
+        <image class="item-ava" src="{{avatar}}"></image>    
+        <text class="name-title">{{name}}</text>
+        <view class="heart_">
+          <!-- <image class="heart" src="../../image/heart.png"></image> -->
+          <text>{{heart_num}}</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</template>
+
+ <!-- <view class='iphone-items'>
+    <view class='p-item left'>
+      <navigator url='../detail/detail'>
+        <view class='p-img'>
+          <image src='https://i8.mifile.cn/v1/a1/1c3e0097-73a6-1788-96f7-2cdb58d82ba1!360x360.webp'></image>
+        </view>
+        <view class='p-info'>
+          <view class='text-scape name'><text>小米8 青春版</text></view>
+          <view class='text-scape brief'><text>潮流镜面渐变色，自拍旗舰</text></view>
+          <view class='price'><text>￥1399 起</text></view>
+        </view>
+      </navigator>
+    </view>
+    <view class='p-item right'>
+      <navigator url='../detail/detail'>
+        <view class='p-img'>
+          <image src='https://i8.mifile.cn/v1/a1/5c55b30b-abd9-3a52-7f8b-7322d288835d!360x360.webp'></image>
+        </view>
+        <view class='p-info'>
+          <view class='text-scape name'><text>小米8 屏幕指纹版</text></view>
+          <view class='text-scape brief'><text>压感屏幕指纹，潮流外观</text></view>
+          <view class='price'><text>￥3199 起</text></view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class='iphone-items'>
+    <view class='p-item'>
+      <navigator url='../detail/detail'>
+        <view class='p-img'>
+          <image src='https://i8.mifile.cn/v1/a1/def98121-4b54-54a6-debb-e5c8a51dd4f7!360x360.webp'></image>
+        </view>
+        <view class='p-info'>
+          <view class='text-scape name'><text>黑鲨游戏手机 Helo</text></view>
+          <view class='text-scape brief'><text>双液冷，更能打</text></view>
+          <view class='price'><text>￥3199 起</text></view>
+        </view>
+      </navigator>
+    </view>
+    <view class='p-item'>
+      <navigator url='../detail/detail'>
+        <view class='p-img'>
+          <image src='https://i8.mifile.cn/v1/a1/a081da10-3758-e051-7a20-0de017f37476!360x360.webp'></image>
+        </view>
+        <view class='p-info'>
+          <view class='text-scape name'><text>红米6</text></view>
+          <view class='text-scape brief'><text>小屏高性能的双摄手机</text></view>
+          <view class='price'><text>￥729 起</text></view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class='iphone-items'>
+    <view class='p-item'>
+      <navigator url='../detail/detail'>
+        <view class='p-img'>
+          <image src='https://i8.mifile.cn/v1/a1/2c506517-9477-c928-8e77-bee18b6818a1!360x360.webp'></image>
+        </view>
+        <view class='p-info'>
+          <view class='text-scape name'><text>红米6A</text></view>
+          <view class='text-scape brief'><text>好用好看不贵</text></view>
+          <view class='price'><text>￥569 起</text></view>
+        </view>
+      </navigator>
+    </view>
+    <view class='p-item'>
+      <navigator url='../detail/detail'>
+        <view class='p-img'>
+          <image src='https://i8.mifile.cn/v1/a1/bd9b6895-5b51-a0d6-fb79-e430ca40dca6!360x360.webp'></image>
+        </view>
+        <view class='p-info'>
+          <view class='text-scape name'><text>小米6X</text></view>
+          <view class='text-scape brief'><text>轻薄美观的拍照手机</text></view>
+          <view class='price'><text>￥1299 起</text></view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class='iphone-items'>
+    <view class='p-item'>
+      <navigator url='../detail/detail'>
+        <view class='p-img'>
+          <image src='https://i8.mifile.cn/v1/a1/a14a8cc3-3f47-3224-d221-8ff8485d624d!360x360.webp'></image>
+        </view>
+        <view class='p-info'>
+          <view class='text-scape name'><text>小米8 SE</text></view>
+          <view class='text-scape brief'><text>三星 AMOLED 全面屏</text></view>
+          <view class='price'><text>￥1699 起</text></view>
+        </view>
+      </navigator>
+    </view>
+    <view class='p-item'>
+      <navigator url='../detail/detail'>
+        <view class='p-img'>
+          <image src='https://i8.mifile.cn/v1/a1/685330bb-cb82-c3c3-e3cf-106c9b9a70e6!360x360.webp'></image>
+        </view>
+        <view class='p-info'>
+          <view class='text-scape name'><text>小米平板4</text></view>
+          <view class='text-scape brief'><text>追剧神器 / 支持AI人脸识别</text></view>
+          <view class='price'><text>￥1099 起</text></view>
+        </view>
+      </navigator>
+    </view>
+  </view> -->

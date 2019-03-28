@@ -1,0 +1,13 @@
+<!--team.wxml-->
+<view class="team">
+  <view class='msg'>
+    <text>哇哦，暂时没有合伙人</text>
+    <text>快去邀请伙伴发展吧！</text>
+  </view>
+  <view class='team_sad'>
+    <image src='/assets/images/mine_team_sad.png'></image>
+  </view>
+  <view class='res'>
+    <button>立即注册</button>
+  </view>
+</view>

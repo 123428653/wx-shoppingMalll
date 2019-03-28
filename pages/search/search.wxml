@@ -1,0 +1,50 @@
+<view>
+  <view class='header'>
+    <view class='top-search'>
+      <view class='section'>
+        <icon class='search-cion' type='search' size='16' color='#b2b2b2' />
+        <input
+          value='{{inputValue}}'
+          bindinput='changeVal'
+          bindconfirm='goSearchList'
+          confirm-type='search'
+          placeholder='搜索商品'
+          focus='{{focus}}'
+          placeholder-class="text-placeholder"></input>
+        <label
+          wx:if='{{inputValue}}'
+          class='icon icon-search_close'
+          bindtap='clearVal'></label>
+        <view class='search-btn' bindtap='goSearchList'>搜索</view>
+      </view>
+    </view>
+  </view>
+  <view class='main'>
+    <view class='border-B hot'>
+      <view class='til'>热搜</view>
+      <view class='items'>
+        <view><navigator url='./searchList/search-list?q=苹果'>苹果</navigator></view>
+        <view><navigator url='./searchList/search-list?q=文案'>文案</navigator></view>
+        <view><navigator url='./searchList/search-list?q=电器'>电器</navigator></view>
+        <view><navigator url='./searchList/search-list?q=苹果'>苹果</navigator></view>
+        <view><navigator url='./searchList/search-list?q=文案'>文案</navigator></view>
+        <view><navigator url='./searchList/search-list?q=电器'>电器</navigator></view>
+      </view>
+    </view>
+    <view class='history'>
+      <view class='til'>搜索历史</view>
+      <view class='items'>
+        <view><navigator url='./searchList/search-list?q=苹果'>苹果</navigator></view>
+        <view><navigator url='./searchList/search-list?q=文案'>文案</navigator></view>
+        <view><navigator url='./searchList/search-list?q=电器'>电器</navigator></view>
+        <view><navigator url='./searchList/search-list?q=苹果'>苹果</navigator></view>
+        <view><navigator url='./searchList/search-list?q=文案'>文案</navigator></view>
+        <view><navigator url='./searchList/search-list?q=电器'>电器</navigator></view>
+      </view>
+      <view class='more'>
+        <text>更多历史搜索</text>
+        <label></label>
+      </view>
+    </view>
+  </view>
+</view>

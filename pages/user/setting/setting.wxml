@@ -1,0 +1,33 @@
+<!--setting.wxml-->
+<view class="setting">
+  <view class='set-list'>
+    <view class='item'>
+      <view class='default-til'>
+        <label class='icon icon-mine_setting_number'></label>
+        <text>您的邀请码</text>
+      </view>
+      <text>32r86yj</text>
+    </view>
+    <view class='item'>
+      <view class='default-til'>
+        <label class='icon icon-mine_setting_phonenumber'></label>
+        <text>绑定手机号</text>
+      </view>
+      <text>13923333333</text>
+    </view>
+    <view class='item'>
+      <view class='default-til'>
+        <label class='icon icon-mine_setting_wechat'></label>
+        <text>绑定微信</text>
+      </view>
+      <text>Weixinhao</text>
+    </view>
+    <view class='item'>
+      <view class='default-til'>
+        <label class='icon icon-mine_setting_time'></label>
+        <text>注册时间</text>
+      </view>
+      <text>2018/02/23</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,62 @@
+<!--partner.wxml-->
+<view class="partner">
+  <view class='tab'>
+    <view class='active'>
+      <text>分享小程序</text>
+    </view>
+    <view>
+      <text>分享海报</text>
+    </view>
+  </view>
+  <view class='partner-msg'>
+    <text>分享小程序卡片给好友</text>
+    <text>好友将成为你的买家</text>
+  </view>
+  <view class="banner-swiper">
+    <swiper
+      indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}"
+      current='{{swiperCurrent}}'
+      indicator-color="{{beforeColor}}"
+      indicator-active-color="{{afterColor}}"
+      circular='{{circular}}'
+      previous-margin="{{previousmargin}}"
+      next-margin="{{nextmargin}}"
+      bindchange="swiperChange" >
+       <block wx:for="{{arr}}" wx:key="key"> 
+          <swiper-item>
+            <image
+              src="{{item.images}}"
+              class="slide-image{{index == swiperCurrent ? ' active' : ''}}"
+              bindchange="chuangEvent"
+              id="{{index}}"></image>
+          </swiper-item>
+       </block> 
+    </swiper>
+  </view>
+  <button bindtap='shareOpen'>分享小程序卡片</button>
+  <view class='pop-wrap {{isOpen ? "open" : ""}}'>
+    <view class='mask' bindtap='shareOpen'></view>
+    <view class='pop-share'>
+      <view class='head'>
+        <text>分享至</text>
+      </view>
+      <button
+        bindtap="handleTapShareButton"
+        open-type="share"
+        class="button-share"
+        id="share-button"></button>
+      <view class='share-to'>
+        <label for='share-button'>
+          <image src='/assets/images/wx.png'></image>
+          <text>微信好友</text>
+        </label>
+        <label for=''>
+          <image src='/assets/images/pyq.png'></image>
+          <text>朋友圈</text>
+        </label>
+      </view>
+      <view class='clear' bindtap='shareOpen'>取消</view>
+    </view>
+  </view>
+</view>

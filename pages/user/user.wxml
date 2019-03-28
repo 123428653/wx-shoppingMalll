@@ -1,0 +1,125 @@
+<!--logs.wxml-->
+  <view class="user">
+    <view class='to-bg'></view>
+    <view class="box user-box">
+      <view class='info' wx:if="{{thumb}}">
+        <view class='avatar'>
+          <image src="{{thumb}}" class="thumb"></image>
+        </view>
+        <view class="nickname">{{nickname || '登录/注册'}}</view>
+        <view class='user-id'><text>VIP会员</text></view>
+      </view>
+      <view class='info' wx:else>
+        <view class='avatar'>
+          <image src="/assets/images/empty_avatar_user.png" class="thumb"></image>
+        </view>
+        <button
+          open-type="getUserInfo"
+          bindgetuserinfo="onGotUserInfo"
+          >登录/注册</button> 
+      </view>
+    </view>
+    <view class='content'>
+      <view class='box cash' wx:if="{{thumb}}">
+        <view class='til'>
+          <label class='icon icon-mine_gold'></label>
+          <text>可提现金额（元）</text>
+        </view>
+        <view class='cash-total'>
+          <text class='f-ava'>99.01</text>
+          <button>提现</button>
+        </view>
+        <view class='cash-items'>
+          <view>
+            <text class='f-ava'>0</text>
+            <text>待结算</text>
+          </view>
+          <view>
+            <text class='f-ava'>0.00</text>
+            <text>累计结算</text>
+          </view>
+          <view>
+            <text class='f-ava'>0.00</text>
+            <text>累计提现</text>
+          </view>
+        </view>
+      </view>
+      <view class='box user-data'>
+        <view class='til'>
+          <label class='icon icon-mine_gold'></label>
+          <text>个人数据</text>
+        </view>
+        <view class='border-B team'>
+          <view class='team-til'>我的团队</view>
+          <view class='people'>
+            <view>
+              <text>团队总人数 (人)</text>
+              <text class='f-ava'>0</text>
+            </view>
+            <view>
+              <text>本月新增人数 (人)</text>
+              <text class='f-ava'>0</text>
+            </view>
+          </view>
+        </view>
+        <view class='order'>
+          <view class='team-til'>我的订单</view>
+          <view class='people'>
+            <view>
+              <text>今日订单 (笔)</text>
+              <text class='f-ava'><text>自主</text>0</text>
+              <text class='f-ava'><text>团队</text>0</text>
+            </view>
+            <view>
+              <text>今日收入 (元)</text>
+              <text class='f-ava'>0</text>
+              <text class='f-ava'>0</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='box user-list'>
+        <navigator url='./description/description'>
+          <view>
+            <label class='icon icon-mine_description'></label>
+            <text>权益说明</text>
+            <label class='right'></label>
+          </view>
+        </navigator>
+        <navigator url='./partner/partner'>
+          <view>
+            <label class='icon icon-mine_partner'></label>
+            <text>邀请合伙人</text>
+            <label class='right'></label>
+          </view>
+        </navigator>
+        <navigator url='./team/team'>
+          <view>
+            <label class='icon icon-mine_team'></label>
+            <text>我的团队</text>
+            <label class='right'></label>
+          </view>
+        </navigator>
+        <navigator url='./contact/contact'>
+          <view>
+            <label class='icon icon-mine_setting_phonenumber'></label>
+            <text>联系我们</text>
+            <label class='right'></label>
+          </view>
+        </navigator>
+        <navigator url='./setting/setting'>
+          <view>
+            <label class='icon icon-mine_setting'></label>
+            <text>功能设置</text>
+            <label class='right'></label>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <!-- <view wx:else>
+    <text>还没有授权..</text>
+    <button
+      open-type="getUserInfo"
+      bindgetuserinfo="onGotUserInfo">马上授权</button>
+  </view> -->

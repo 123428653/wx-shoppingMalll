@@ -1,0 +1,76 @@
+/**index.wxss**/
+@import '/assets/css/sprites.wxss';
+.index-list{
+  margin-right: -18rpx;
+  padding-top: 18rpx;
+}
+.item{
+  background-color: #fff;
+  width: 336rpx;
+  margin:0 18rpx 18rpx 0;
+  display: inline-block;
+}
+.item-img{
+  margin-right: 20rpx;
+}
+.img{
+  width: 336rpx;
+  height: 312rpx;
+  background-color: #b2b2b2;
+}
+.item-info{
+  padding: 18rpx 14rpx;
+  flex: 1;
+}
+.item-title{
+  font-size: 28rpx;
+  max-height: 80rpx;
+  height: 80rpx;
+  color: #1e1e1e;
+  margin-bottom: 8rpx;
+}
+.item-title-box{
+  display: flex;
+  position: relative;
+}
+.option{
+  width: 100%;
+}
+.coupon-price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15rpx;
+}
+.coupon-price text{
+  font-size: 20rpx;
+  color: #5b5b5b;
+}
+.coupon{
+  font-size: 20rpx;
+}
+.price{
+  font-size: 36rpx;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.coupon-tip{
+  display: inline-block;
+  width: 76rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #ff4964;
+  border-radius: 4rpx;
+  margin-right: 10rpx;
+  font-size: 20rpx;
+}
+.btn-sale{
+  display: flex;
+  justify-content: space-between;
+}
+.btn-sale label{
+  margin-right: 20rpx;
+}

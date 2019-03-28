@@ -1,0 +1,22 @@
+<!--contcat.wxml-->
+<view class="contcat">
+  <view class='wxCode'>
+    <view class='logo'>
+      <text>logo</text>
+    </view>
+    <view class='code'></view>
+    <button>保存二维码到手机</button>
+  </view>
+  <view class='more'>更多信息获取方法</view>
+  <view class='contcat-list'>
+    <view class='item'>
+      <text>商务合作 : {{id}}</text>
+      <view class='copy' id='id' bindtap='copy'>复制</view>
+    </view>
+    <view class='item'>
+      <text>客服反馈QQ : {{qq}}</text>
+      <view class='copy' id='qq' bindtap='copy'>复制</view>
+    </view>
+  </view>
+  <view class='copy-msg'>复制联系方式添加好友或进群</view>
+</view>

@@ -1,0 +1,93 @@
+/**index.wxss**/
+ @import '/assets/css/sprites.wxss';
+.item{
+  background-color: #fff;
+  margin-bottom: 18rpx;
+  display: flex;
+  border-radius: 10rpx;
+}
+.img{
+  width: 210rpx;
+  height: 210rpx;
+  border-radius: 10rpx;
+  background-color: #b2b2b2;
+}
+.item-info{
+  padding: 18rpx;
+  flex: 1;
+}
+.item-title{
+  font-size: 28rpx;
+  max-height: 75rpx;
+  height: 80rpx;
+  color: #1e1e1e;
+  margin-bottom: 10rpx;
+}
+.item .name{
+  display: flex;
+  padding: 0 15rpx;
+  margin-top: 20rpx;
+  padding-bottom: 10rpx;
+  align-items: center;
+  font-size: 22rpx;
+  color: #1e1e1e;
+  font-family: 'PingFang SC-Medium';
+}
+.item-title-box{
+  display: flex;
+  position: relative;
+}
+.option{
+  display: flex;
+  justify-content: space-between;
+}
+.coupon-price{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.coupon{
+  font-size: 20rpx;
+}
+.price{
+  font-size: 38rpx;
+  color: #616161;
+  font-weight: bold;
+}
+.price .back{
+  font-size: 22rpx;
+  margin-left: 10rpx;
+}
+.btn-sale text{
+  font-size: 20rpx;
+  color: #949494;
+  text-align: right;
+  display: block;
+  margin-bottom: 5rpx;
+}
+.btn-sale button{
+  height: 58rpx;
+  line-height: 58rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff4964;
+}
+.name-title{
+  flex: 1;
+  margin-left: 18rpx;
+  margin-right: 20rpx;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.text-line-2{
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-family: 'PingFang SC-Medium';
+}

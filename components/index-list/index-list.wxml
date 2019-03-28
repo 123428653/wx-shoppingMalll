@@ -1,0 +1,28 @@
+<!-- 组件 index-list.wxml -->
+<view class="index-list">
+  <view wx:for='{{data}}' wx:key='{{index}}' class='item'>
+    <navigator url='/pages/detail/detail' class='item-img'>
+      <image class="img" src="{{item.url}}" mode="widthFix"></image>
+    </navigator>
+    <view class='item-info'>
+      <navigator url='/pages/detail/detail'>
+        <view class="text-line-2 item-title">{{item.name}}</view>
+      </navigator>
+      <view class='option'>
+        <view class='coupon-price'>
+          <view class='coupon'>
+            <label class='icon icon-coupon'>{{item.coupon}}元</label>
+          </view>
+          <text>销量{{item.sale}}件</text>
+        </view>
+        <view class='btn-sale'>
+          <view class='price'>
+            <text class='coupon-tip'>券后价</text>
+            <text class='f-ava'>￥{{item.price}}</text>
+          </view>
+          <label class='icon icon-cart'></label>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

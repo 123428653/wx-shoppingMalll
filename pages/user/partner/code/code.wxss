@@ -1,0 +1,61 @@
+.code{
+  margin: 47rpx 80rpx 0;
+}
+.til{
+  font-size: 32rpx;
+  margin-bottom: 26rpx;
+  color: #4e4e4e;
+}
+.input{
+  font-size: 32rpx;
+  color: #222;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 4rpx solid #ebebeb;
+  text-align: center;
+}
+.text-placeholder{
+  color: #ebebeb;
+  text-align: center;
+}
+.invite-f{
+  display: flex;
+  align-items: center;
+  height: 118rpx;
+  padding: 36rpx 20rpx;
+  background-color: #f6f6f6;
+  border-radius: 22rpx;
+  margin-top: 42rpx;
+}
+.invite-f .avatar{
+  width: 118rpx;
+  height: 118rpx;
+  line-height: 118rpx;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 40rpx;
+}
+.invite-f .info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  flex: 1;
+  height: 100%;
+  color: #222;
+  font-size: 26rpx;
+}
+.code button{
+  height: 102rpx;
+  line-height: 102rpx;
+  margin-top: 154rpx;
+  font-size: 36rpx;
+  color: #fff;
+  border-radius: 102rpx;
+  background-color: #ff4964;
+  box-shadow:0 0 27rpx #c2c2c2;
+}
+.code .default{
+  opacity: 0.25;
+}

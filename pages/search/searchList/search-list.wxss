@@ -1,0 +1,8 @@
+@import '/assets/css/search.wxss';
+
+page{
+  background-color: #f5f5f5;
+}
+.main{
+  padding: 18rpx 30rpx;
+}

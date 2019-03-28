@@ -1,0 +1,168 @@
+<!--index.wxml-->
+<view class="detail">
+  <view>
+    <view class='nav-bar'>
+      <poster
+        id="poster"
+        preload="{{true}}"
+        config="{{jdConfig}}"
+        bind:success="onPosterSuccess"
+        bind:fail="onPosterFail">
+        <button class='create-share'>生成分享图</button>
+      </poster>
+      <view>
+        <button bindtap='triggetBuyPop'>自买</button>
+        <button class='btn-share' bindtap='triggetPop'>分享</button>
+      </view>
+    </view>
+    <swiper
+      indicator-color='{{swiper.indicatorColor}}'
+      indicator-active-color='{{swiper.indicatorActiveColor}}'
+      indicator-dots="{{swiper.indicatorDots}}"
+      autoplay="{{swiper.autoplay}}"
+      interval="{{swiper.interval}}"
+      duration="{{swiper.duration}}">
+      <block wx:for="{{swiper.imgUrls}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="http://dummyimage.com/750x640/{{index == 0 ? 'f6ffed' : index == 1 ? 'f9f0ff' : 'd6e4ff'}}" class="slide-image" mode="widthFix" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="detail-head">
+      <view class="price">
+        <text class='tag'>券后价</text>
+        <text class='text f-ava'><text class="symbol">￥</text>3599</text>
+        <text class='original'>原价: 11.80</text>
+      </view>
+      <view class="name">小米8 屏幕指纹版 (全球首款 压感屏幕指纹 / 双频GPS超精准定位 / 支持红外人脸识别 / 骁龙845 AIE 旗舰处理器)</view>
+      <!-- <view class='des'>
+        <text>全球首款 压感屏幕指纹 / 双频GPS超精准定位 / 支持红外人脸识别 / 骁龙845 AIE 旗舰处理器</text>
+      </view> -->
+      <view class='coupon'>
+        <label class='icon icon-coupon'>25元</label>
+        <text>优惠券: 42869/50000</text>
+      </view>
+      <view class='sales'>
+        <text>销量: 35062件</text>
+        <text>商品评分: 4.62</text>
+      </view>
+      <!-- <view><image src='{{img}}' mode='widthFix' bindtap='bindTab'></image></view>
+      <button wx:if="{{!isFirst}}" bindtap='isFirstSaveImg'>保存图片</button>
+      <button wx:else bindopensetting='handler' open-type='openSetting'>去授权保存图片</button> -->
+      <view class='discounted'>
+        <view class='discounted-item'>
+          <image src='/assets/images/share_buy.png'></image>
+          <view>
+            <view class='discounted-prices'>
+              <text class='f-ava'>1.64</text>元
+            </view>
+            <view>自买可省</view>
+          </view>
+        </view>
+        <view class='discounted-item'>
+          <image src='/assets/images/share.png'></image>
+          <view>
+            <view class='discounted-prices'>
+              <text class='f-ava'>0.89</text>元
+            </view>
+            <view>分享可赚</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='detail-images'>
+      <view class='detail-images-til'>
+        <view class='active'>图文详情</view>
+        <view>商品参数</view>        
+      </view>
+      <view class='detail-images-content'>
+        <view class='images-1'><image src='https://i8.mifile.cn/v1/a1/84269c10-cf27-5c8c-6ad8-338ae645fb6d.webp?w=1080&h=1816&bg=2C213C' mode='widthFix'></image></view>
+        <view class='images-2'><image src='https://i8.mifile.cn/v1/a1/de2e8c3a-cf2f-60d8-f4c4-8437c9920685.webp?w=1080&h=829&bg=0D0E11' mode='widthFix'></image></view>
+        <view class='images-3'><image src='https://i8.mifile.cn/v1/a1/6255f495-8cdf-edc6-bf93-7f523090f491.webp?w=1080&h=586&bg=11151F' mode='widthFix'></image></view>
+        <view class='images-4'><image src='https://i8.mifile.cn/v1/a1/e51656f2-17fd-ddfa-3d33-e22589fd5bc3.webp?w=1080&h=1093&bg=1F1F27' mode='widthFix'></image></view>
+        <view class='images-5'><image src='https://i8.mifile.cn/v1/a1/f6d6a02a-61ba-d053-499f-96e040aa8e4a.webp?w=1080&h=693&bg=17171A' mode='widthFix'></image></view>
+        <view class='images-6'><image src='https://i8.mifile.cn/v1/a1/ad111aea-0117-30f8-d991-ee71a3f8d25d.webp?w=1080&h=1080&bg=DE7C66' mode='widthFix'></image></view>
+        <view class='images-7'><image src='https://i8.mifile.cn/v1/a1/db2897d7-5626-d924-3434-931d6b78ed5c.webp?w=1080&h=789&bg=271E19' mode='widthFix'></image></view>
+        <view class='images-8'><image src='https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/5963c322f11d00e334441f8ea7862fd0.jpg?w=1080&h=1086&bg=FFFFFF' mode='widthFix'></image></view>
+        
+        <view class='images-9'><image src='https://i8.mifile.cn/v1/a1/0bbfe9c4-2519-520a-9f99-16738f47fe72.webp?w=1080&h=643&bg=1F1B1A' mode='widthFix'></image></view>
+        <view class='images-10'><image src='https://i8.mifile.cn/v1/a1/a2c97e1d-47ec-4552-a6db-68d1c6150754.webp?w=1080&h=1441&bg=897E86' mode='widthFix'></image></view>
+        <view class='images-11'><image src='https://i8.mifile.cn/v1/a1/ba897d37-b4eb-308b-9c7b-392354791da7.webp?w=1080&h=538&bg=27201C' mode='widthFix'></image></view>
+        <view class='images-12'><image src='https://i8.mifile.cn/v1/a1/1c1e5e0f-c73f-964e-1d5c-4ec164a9d838.webp?w=1080&h=1051&bg=28272A' mode='widthFix'></image></view>
+        <view class='images-13'><image src='https://i8.mifile.cn/v1/a1/8a248aad-b52e-0a8c-e40b-a934cbf97018.webp?w=1080&h=685&bg=1B1B1D' mode='widthFix'></image></view>
+        <view class='images-14'><image src='https://i8.mifile.cn/v1/a1/f193c801-b580-0fac-5120-e6a5eb48b0b7.webp?w=1080&h=560&bg=181818' mode='widthFix'></image></view>
+        <view class='images-bg'></view>
+        <view class='images-15'>
+          <image src='https://i8.mifile.cn/v1/a1/eae51e64-52d3-a3fc-8cf8-cd01a9c4df76.webp?w=1080&h=1254&bg=7F6F5F' mode='widthFix'></image>
+        </view>
+        <view class='images-bg'></view>
+        <view class='images-16'><image src='https://i8.mifile.cn/v1/a1/711d2a5c-b2f2-d312-90cc-60f0b51305c7.webp?w=1080&h=884&bg=1B170E' mode='widthFix'></image></view>
+        <view class='images-17'><image src='https://i8.mifile.cn/v1/a1/6a83974b-2f66-b0c9-4370-84b9e2460a32.webp?w=1080&h=1502&bg=2A2552' mode='widthFix'></image></view>
+        <view class='images-18'><image src='https://i8.mifile.cn/v1/a1/b352fd18-c1e4-4a48-a5b8-0fd469c5cc8a.webp?w=1080&h=744&bg=0F0F0F' mode='widthFix'></image></view>
+        <view class='images-19'><image src='https://i8.mifile.cn/v1/a1/f243cc04-41c9-129a-e412-5dc9a53c5a36.webp?w=1080&h=214&bg=1E1845' mode='widthFix'></image></view>
+        <view class='images-20'>
+          <image src='https://i8.mifile.cn/v1/a1/2092fd8d-568a-021c-8e58-cd83b03a2679.webp?w=1080&h=806&bg=0B0B0B' mode='widthFix'></image>
+        </view>
+        <view class='images-bg'></view>
+        <view class='images-bg'></view>
+        <view class='images-bg'></view>
+        <view class='images-bg'></view>
+      </view>
+    </view>
+    <view class='pop-wrap {{isOpenBuyPop? "open" : ""}}'>
+      <view class='mask' bindtap='triggetBuyPop'></view>
+      <view class='pop-buy'>
+        <view class='l'>
+          <view class='price'>
+            <view class='tag'>券后价</view>
+            <view class='text f-ava'><text class='symbol'>￥</text>3599</view>
+          </view>
+          <view class='text-line-3'>
+            小米8 屏幕指纹版 (全球首款 压感屏幕指纹 / 双频GPS超精准定位 / 支持红外人脸识别 / 骁龙845 AIE 旗舰处理器)
+          </view>
+          <view class='coupon'>
+            <label class='icon icon-coupon'>25元</label>
+          </view>
+        </view>
+        <view class='r'>
+          <image src='/assets/images/jdwx.jpg'></image>
+          <text>长按识别二维码购买</text>
+        </view>
+      </view>
+    </view>
+    <view class='pop-wrap {{isOpenPop ? "open" : ""}}'>
+      <view class='mask' bindtap='triggetPop'></view>
+      <view class='pop-share'>
+        <view class='pop-head'>分享</view>
+        <view class='pop-body'>
+          <view class='pop-info'>
+            <text>{{shareTxt}}</text>
+          </view>
+          <view class='btns'>
+            <view>
+              <image bindtap='copyTxt' src='/assets/images/share_copy.png'></image>
+              <text>复制文案</text>
+            </view>
+            <view>
+              <poster
+                id="poster"
+                preload="{{true}}"
+                config="{{jdConfig}}"
+                bind:success="onPosterSuccessCopy"
+                bind:fail="onPosterFail">
+                <image src='/assets/images/share_program.png'></image>
+              </poster>
+              <text>复制文案并生成</text>
+              <text>小程序分享图片</text>
+            </view>
+            <view>
+              <image src='/assets/images/share_h5.png'></image>
+              <text>复制文案并生</text>
+              <text>成H5分享图片</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

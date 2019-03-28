@@ -1,0 +1,30 @@
+<view>
+  <view class='header'>
+    <view class='top-search'>
+      <view class='section'>
+        <icon class='search-cion' type='search' size='16' color='#b2b2b2' />
+        <input
+          value='{{inputValue}}'
+          bindconfirm='searchList'
+          bindinput='changeVal'
+          confirm-type='search'
+          placeholder='搜索商品'
+          placeholder-class="text-placeholder"></input>
+        <label
+          wx:if='{{inputValue}}'
+          class='icon icon-search_close'
+          bindtap='clearVal'></label>
+        <view class='search-btn' bindtap='searchList'>搜索</view>
+      </view>
+    </view>
+  </view>
+  <view class='border-B filter'>
+    <view class='active'><text selectable='true'>综合</text></view>
+    <view><text>返利</text></view>
+    <view><text>销量</text></view>
+    <view class='sort asc'><text>价格</text><label></label></view>
+  </view>
+  <view class='main' wx:if='{{!isLoading}}'>
+    <list list='{{list}}'></list>
+  </view>
+</view>

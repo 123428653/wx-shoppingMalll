@@ -1,0 +1,24 @@
+<view class="code">
+  <view class='til'>请输入邀请信息</view>
+  <view class='txt'>
+    <input
+      value='{{code}}'
+      class='input'
+      confirm-type='next'
+      bindconfirm='nextSubmit'
+      maxlength='6'
+      placeholder='请输入六位邀请码'
+      placeholder-class='text-placeholder'
+      bindinput="changeInput"></input>
+  </view>
+  <view class='invite-f'>
+    <view class='avatar'>
+      <text>头像</text>
+    </view>
+    <view class='info'>
+      <view>用户昵称十二个字</view>
+      <view>邀请您接入xxxxxx</view>
+    </view>
+  </view>
+  <button class='noneBorder {{isDefault ? "default" : ""}}' bindtap='nextSubmit'>下一步</button>
+</view>
